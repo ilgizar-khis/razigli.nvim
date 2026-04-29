@@ -31,6 +31,7 @@ require("lsp.mason")
 require("lsp.cmp")
 require("lsp.formatter")
 require("lsp.brackets")
+require("lsp.command")
 
 require("ui.tabline")
 require("ui.statusline")
