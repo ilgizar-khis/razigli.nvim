@@ -1,10 +1,8 @@
 vim.pack.add({
     "https://github.com/nvim-mini/mini.tabline.git",
-    "https://github.com/nvim-mini/mini.icons.git"
 })
 
 MiniTabline = require("mini.tabline")
-require("mini.icons").setup({})
 MiniTabline.setup({
 	format = function(buf_id, label)
 		local suffix = vim.bo[buf_id].modified and "[+]" or "[ ]"
