@@ -33,6 +33,7 @@ require("lsp.formatter")
 require("lsp.brackets")
 require("lsp.command")
 
+require("ui.colorscheme")
 require("ui.tabline")
 require("ui.statusline")
 require("ui.terminal")
