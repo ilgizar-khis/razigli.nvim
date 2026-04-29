@@ -24,12 +24,13 @@ vim.opt.relativenumber = true
 -- pairs
 vim.opt.matchtime = 2
 -- clipboard
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 require("lsp.lsp")
 require("lsp.mason")
 require("lsp.cmp")
 require("lsp.formatter")
+require("lsp.brackets")
 
 require("ui.tabline")
 require("ui.statusline")
