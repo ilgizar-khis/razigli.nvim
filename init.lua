@@ -28,3 +28,4 @@ vim.opt.clipboard = 'unnamedplus'
 
 require("lsp.lsp")
 require("lsp.mason")
+require("lsp.cmp")
