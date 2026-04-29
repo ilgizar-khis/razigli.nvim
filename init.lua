@@ -1,8 +1,3 @@
--- add nulberline
-vim.opt.number = true
-vim.opt.relativenumber = true
--- add signscolumn
-vim.opt.signcolumn = "yes"
 -- search
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
@@ -18,3 +13,15 @@ vim.opt.sidescrolloff = 4
 vim.opt.termguicolors = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+-- lines and columns
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.laststatus = 3
+vim.opt.showtabline = 2
+vim.opt.signcolumn = "yes"
+vim.opt.number = true
+vim.opt.relativenumber = true
+-- pairs
+vim.opt.matchtime = 2
+-- clipboard
+vim.opt.clipboard = 'unnamedplus'
