@@ -27,3 +27,4 @@ vim.opt.matchtime = 2
 vim.opt.clipboard = 'unnamedplus'
 
 require("lsp.lsp")
+require("lsp.mason")
