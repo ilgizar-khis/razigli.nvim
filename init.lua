@@ -25,3 +25,5 @@ vim.opt.relativenumber = true
 vim.opt.matchtime = 2
 -- clipboard
 vim.opt.clipboard = 'unnamedplus'
+
+require("lsp.lsp")
