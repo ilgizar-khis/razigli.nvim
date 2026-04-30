@@ -37,3 +37,5 @@ require("ui.statusline")
 require("ui.terminal")
 require("ui.telescope")
 require("ui.filemanager")
+
+require("pack.clear")
