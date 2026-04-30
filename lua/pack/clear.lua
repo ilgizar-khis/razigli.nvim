@@ -1,9 +1,9 @@
 local prompt = {
 	"<Esc> = quit",
 	"<Cr> = confirm",
-	"<Space> = toggle [+]/[ ]",
+	"<Space> = toggle [-]/[ ]",
 	"<S-u> = update",
-	"[+] = marked to delete",
+	"[-] = marked to delete",
 	"",
 }
 
@@ -13,7 +13,7 @@ local function update(win, buffer)
 	for _, pack in ipairs(vim.pack.get()) do
 		-- if plugin disabled we add he to list
 		if not pack.active then
-			table.insert(packs, "[+] " .. pack.spec.name)
+			table.insert(packs, "[-] " .. pack.spec.name)
 			table.insert(packs, "\tsrc = " .. pack.spec.src)
 		end
 	end
@@ -83,10 +83,10 @@ local function toggle(win, buffer)
 		-- get current line
 		local line = vim.api.nvim_buf_get_lines(buffer, lineNr - 1, lineNr, false)[1]
 		if line ~= nil then
-			if string.find(line, "^%[%+%]") then
-				line, _ = string.gsub(line, "^%[%+%]", "[ ]")
+			if string.find(line, "^%[%-%]") then
+				line, _ = string.gsub(line, "^%[%-%]", "[ ]")
 			elseif string.find(line, "^%[ %]") then
-				line, _ = string.gsub(line, "^%[ %]", "[+]")
+				line, _ = string.gsub(line, "^%[ %]", "[-]")
 			end
 			print(line)
 			vim.api.nvim_buf_set_lines(buffer, lineNr - 1, lineNr, false, { line })

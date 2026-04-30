@@ -2,7 +2,7 @@ local prompt = {
 	"<Esc> = quit",
 	"<S-u> = update",
 	"[+] = enabled",
-	"[-] = disabled",
+	"[ ] = disabled",
 	"",
 }
 
@@ -15,7 +15,7 @@ local function update(win, buffer)
 		if pack.active then
 			mark = string.format(mark, "+")
 		else
-			mark = string.format(mark, "-")
+			mark = string.format(mark, " ")
 		end
 		table.insert(packs, mark .. " " .. pack.spec.name)
 		table.insert(packs, "\tsrc = " .. pack.spec.src)
