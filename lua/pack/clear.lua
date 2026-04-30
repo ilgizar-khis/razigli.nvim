@@ -1,5 +1,5 @@
 local prompt = {
-	"<Esc> = cancel",
+	"<Esc> = quit",
 	"<Cr> = confirm",
 	"<Space> = toggle [+]/[ ]",
 	"<S-u> = update",
