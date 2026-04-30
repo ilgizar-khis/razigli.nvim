@@ -17,7 +17,12 @@ local function update(win, buffer)
 			table.insert(packs, "\tsrc = " .. pack.spec.src)
 		end
 	end
-	vim.api.nvim_buf_set_lines(buffer, #prompt, -1, true, packs)
+	if #packs > 0 then
+		vim.api.nvim_buf_set_lines(buffer, #prompt, -1, true, packs)
+	else
+		vim.api.nvim_buf_set_lines(buffer, #prompt, -1, true, { "No such disabled plugins" })
+	end
+
 	print("plugin list updated")
 	vim.api.nvim_win_set_cursor(win, { #prompt + 1, 3 })
 end
