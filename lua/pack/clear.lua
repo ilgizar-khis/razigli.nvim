@@ -19,6 +19,31 @@ local function update(buffer)
 	vim.api.nvim_buf_set_lines(buffer, #prompt, -1, true, packs)
 end
 
+local function toggle(win, buffer)
+	-- get current line number
+	local lineNr = vim.api.nvim_win_get_cursor(win)[1]
+	-- check in/out field
+	if lineNr > #prompt then
+		-- if current relative line number is even,
+		-- then we clicked on the title,
+		-- else we need go to .-1
+		if (lineNr - #prompt) % 2 == 0 then
+			lineNr = lineNr - 1
+		end
+		-- get current line
+		local line = vim.api.nvim_buf_get_lines(buffer, lineNr - 1, lineNr, false)[1]
+		if line ~= nil then
+			if string.find(line, "^%[%+%]") then
+				line, _ = string.gsub(line, "%[%+%]", "[ ]")
+			elseif string.find(line, "^%[ %]") then
+				line, _ = string.gsub(line, "%[% %]", "[+]")
+			end
+			print(line)
+			vim.api.nvim_buf_set_lines(buffer, lineNr - 1, lineNr, false, { line })
+		end
+	end
+end
+
 local function clearPacks()
 	-- create buffer and write prompt
 	local buffer = vim.api.nvim_create_buf(false, true)
@@ -41,6 +66,10 @@ local function clearPacks()
 	vim.api.nvim_win_set_option(win, "relativenumber", false)
 
 	update(buffer)
+
+	vim.keymap.set("n", "<Space>", function()
+		toggle(win, buffer)
+	end, { buffer = buffer, noremap = true, silent = true })
 end
 
 vim.api.nvim_create_user_command("ClearPacks", function()
