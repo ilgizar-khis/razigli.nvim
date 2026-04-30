@@ -44,3 +44,5 @@ require("keys.buffers")
 
 require("pack.clear")
 require("pack.list")
+
+require("git.neogit")
