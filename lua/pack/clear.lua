@@ -79,9 +79,9 @@ local function toggle(win, buffer)
 		local line = vim.api.nvim_buf_get_lines(buffer, lineNr - 1, lineNr, false)[1]
 		if line ~= nil then
 			if string.find(line, "^%[%+%]") then
-				line, _ = string.gsub(line, "%[%+%]", "[ ]")
+				line, _ = string.gsub(line, "^%[%+%]", "[ ]")
 			elseif string.find(line, "^%[ %]") then
-				line, _ = string.gsub(line, "%[ %]", "[+]")
+				line, _ = string.gsub(line, "^%[ %]", "[+]")
 			end
 			print(line)
 			vim.api.nvim_buf_set_lines(buffer, lineNr - 1, lineNr, false, { line })
@@ -93,10 +93,15 @@ local function confirm(win, buffer)
 	local packs = vim.api.nvim_buf_get_lines(buffer, #prompt, -1, false)
 	local markedPacks = {}
 	for _, line in ipairs(packs) do
-		if string.find(line, "%[%+%]") then
+		if string.find(line, "^%[%+%]") then
+			local name, _ = string.gsub(line, "^%[%+%] ", "")
+			table.insert(markedPacks, name)
 		end
 	end
-	print(packs[1])
+
+	vim.pack.del(markedPacks)
+
+	update(win, buffer)
 end
 
 local function clearPacks()
