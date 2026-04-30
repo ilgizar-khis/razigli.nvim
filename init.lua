@@ -41,3 +41,4 @@ require("ui.telescope")
 require("ui.filemanager")
 
 require("keys.buffers")
+require("pack.clear")
