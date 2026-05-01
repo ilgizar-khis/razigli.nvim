@@ -129,6 +129,7 @@ local function clearPacks()
 	-- set options
 	vim.api.nvim_win_set_option(win, "number", false)
 	vim.api.nvim_win_set_option(win, "relativenumber", false)
+	vim.api.nvim_win_set_option(win, "signcolumn", "no")
 
 	update(win, buffer)
 
