@@ -2,7 +2,7 @@ local function read()
 	local pwd = vim.fn.getcwd()
 	local path = pwd .. "/.todo.json"
 	local lines = {}
-	if vim.fn.filereadable(path) then
+	if vim.fn.filereadable(path) == 1 then
 		lines = vim.fn.readfile(path)
 	else
 		return nil
@@ -15,16 +15,16 @@ local function read()
 	return content
 end
 
-local function update(mainPage)
-	local text = {
-		{
-			date = os.date("%d %B %Y, %H:%M:%S"),
-			content = "first init",
-			done = true,
-			deadline = 0,
-		},
-	}
+local function write(data)
+	local pwd = vim.fn.getcwd()
+	local path = pwd .. "/.todo.json"
+	local text = vim.json.encode(data)
+	text = vim.fn.system("jq .", text)
+	local lines = vim.split(text, "\n")
+	vim.fn.writefile(lines, path)
+end
 
+local function update(mainPage)
 	local data = read()
 	local output = {}
 
@@ -60,7 +60,7 @@ local function add(win)
 	vim.api.nvim_win_set_cursor(win, { #prompt, 1 })
 
 	vim.keymap.set("n", "w", function()
-		print("")
+		write(addPage)
 	end, { buffer = addPage })
 end
 
