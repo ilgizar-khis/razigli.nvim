@@ -1,7 +1,21 @@
-local function update(buf)
+local function read()
 	local pwd = vim.fn.getcwd()
 	local path = pwd .. "/.todo.json"
+	local lines = {}
+	if vim.fn.filereadable(path) then
+		lines = vim.fn.readfile(path)
+	else
+		return nil
+	end
 
+	local text = table.concat(lines, "\n")
+
+	local content = vim.json.decode(text)
+
+	return content
+end
+
+local function update(mainPage)
 	local text = {
 		{
 			date = os.date("%d %B %Y, %H:%M:%S"),
@@ -10,35 +24,54 @@ local function update(buf)
 			deadline = 0,
 		},
 	}
-	if vim.fn.filereadable(path) == 1 then
-		text = vim.fn.readfile(path)
-	else
-		local json = vim.json.encode(text)
-		local prettyJson = vim.fn.system("jq .", json)
-		local content = vim.split(prettyJson, "\n")
-		vim.fn.writefile(content, path)
-	end
 
-	local content = table.concat(text, "\n")
-	local json = vim.json.decode(content)
+	local data = read()
 	local output = {}
-	for _, tbl in ipairs(json) do
-		local mark = "[" .. (tbl.done and "+" or " ") .. "]"
-		table.insert(output, mark .. " date = " .. tbl.date)
-		table.insert(output, "\tcontent = " .. tbl.content)
-		table.insert(output, "\tdeadline = " .. tbl.deadline)
+
+	if data then
+		for _, tbl in ipairs(data) do
+			local mark = "[" .. (tbl.done and "+" or " ") .. "]"
+			table.insert(output, mark .. " date = " .. tbl.date)
+			local lines = vim.split(tbl.content, "\n")
+			for _, line in ipairs(lines) do
+				table.insert(output, "\t" .. line)
+			end
+		end
+	else
+		output = { "Empty" }
 	end
-	vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
+	vim.api.nvim_buf_set_lines(mainPage, 0, -1, false, output)
+end
+
+local function add(win)
+	local addPage = vim.api.nvim_create_buf(false, true)
+
+	local prompt = {
+		"date: " .. os.date("%d %B %Y, %H:%M:%S"),
+		"w = save",
+		"q = quit",
+		"",
+	}
+
+	vim.api.nvim_win_set_buf(win, addPage)
+
+	vim.api.nvim_buf_set_lines(addPage, 0, -1, false, prompt)
+
+	vim.api.nvim_win_set_cursor(win, { #prompt, 1 })
+
+	vim.keymap.set("n", "w", function()
+		print("")
+	end, { buffer = addPage })
 end
 
 local function todo()
-	local buf = vim.api.nvim_create_buf(false, true)
+	local mainPage = vim.api.nvim_create_buf(false, true)
 
 	local width = 160
 	local height = 40
 	local col = math.floor((vim.api.nvim_get_option("columns") - width) / 2)
 	local row = math.floor((vim.api.nvim_get_option("lines") - height) / 2)
-	local win = vim.api.nvim_open_win(buf, true, {
+	local win = vim.api.nvim_open_win(mainPage, true, {
 		relative = "editor",
 		width = width,
 		height = height,
@@ -50,7 +83,12 @@ local function todo()
 	vim.api.nvim_win_set_option(win, "relativenumber", false)
 	vim.api.nvim_win_set_option(win, "signcolumn", "no")
 
-	update(buf)
+	-- add ToDoItem keymap
+	vim.keymap.set("n", "a", function()
+		add(win, mainPage)
+	end, { buffer = mainPage })
+
+	update(mainPage)
 end
 
 vim.api.nvim_create_user_command("ToDo", function()
