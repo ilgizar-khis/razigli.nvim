@@ -5,7 +5,7 @@ local function read()
 	if vim.fn.filereadable(path) == 1 then
 		lines = vim.fn.readfile(path)
 	else
-		return nil
+		return {}
 	end
 
 	local text = table.concat(lines, "\n")
@@ -29,9 +29,9 @@ local function update(mainPage)
 	local output = {}
 
 	if data then
-		for _, tbl in ipairs(data) do
+		for key, tbl in pairs(data) do
 			local mark = "[" .. (tbl.done and "+" or " ") .. "]"
-			table.insert(output, mark .. " date = " .. tbl.date)
+			table.insert(output, mark .. " " .. key)
 			local lines = vim.split(tbl.content, "\n")
 			for _, line in ipairs(lines) do
 				table.insert(output, "\t" .. line)
@@ -43,13 +43,14 @@ local function update(mainPage)
 	vim.api.nvim_buf_set_lines(mainPage, 0, -1, false, output)
 end
 
-local function add(win)
+local function add(win, mainPage)
 	local addPage = vim.api.nvim_create_buf(false, true)
 
 	local prompt = {
 		"date: " .. os.date("%d %B %Y, %H:%M:%S"),
 		"w = save",
 		"q = quit",
+		string.rep("_", 40),
 		"",
 	}
 
@@ -57,10 +58,32 @@ local function add(win)
 
 	vim.api.nvim_buf_set_lines(addPage, 0, -1, false, prompt)
 
-	vim.api.nvim_win_set_cursor(win, { #prompt, 1 })
+	vim.api.nvim_win_set_cursor(win, { #prompt, 4 })
 
 	vim.keymap.set("n", "w", function()
-		write(addPage)
+		local date = vim.api.nvim_buf_get_lines(addPage, 0, 1, false)[1]
+		date = string.gsub(date, "^date: ", "")
+		local lines = vim.api.nvim_buf_get_lines(addPage, #prompt - 1, -1, false)
+		local text = table.concat(lines, "\n")
+		local data = read()
+		if data[date] then
+			if data[date].content == text then
+				print("Nothing up to date")
+				return
+			else
+				print(date .. " note has been edited")
+			end
+		end
+		data[date] = {
+			content = text,
+			done = false,
+		}
+		write(data)
+	end, { buffer = addPage })
+
+	vim.keymap.set("n", "q", function()
+		vim.api.nvim_win_set_buf(win, mainPage)
+		vim.api.nvim_buf_delete(addPage, {})
 	end, { buffer = addPage })
 end
 
