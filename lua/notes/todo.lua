@@ -34,13 +34,13 @@ local function update(mainPage)
 			table.insert(output, mark .. " " .. key)
 			local lines = vim.split(tbl.content, "\n")
 			for _, line in ipairs(lines) do
-				table.insert(output, "\t" .. line)
+				table.insert(output, string.rep(" ", 4) .. line)
 			end
 		end
 	else
 		output = { "Empty" }
 	end
-	vim.api.nvim_buf_set_lines(mainPage, 0, -1, false, output)
+	vim.api.nvim_buf_set_lines(mainPage, -1, -1, false, output)
 end
 
 local function add(win, mainPage)
@@ -87,7 +87,59 @@ local function add(win, mainPage)
 	end, { buffer = addPage })
 end
 
+local function edit(win, mainPage)
+	local editPage = vim.api.nvim_create_buf(false, true)
+	local lineNr = vim.api.nvim_win_get_cursor(win)[1]
+	local lines = vim.api.nvim_buf_get_lines(mainPage, 0, -1, false)
+	local output = {}
+
+	local startPos, endPos = 0, 0
+	for i = 0, #lines do
+		if 0 < lineNr - i and lineNr - i < #lines then
+			if string.find(lines[lineNr - i], "^%[") and startPos == 0 then
+				startPos = lineNr - i
+			end
+		end
+
+		if 0 < lineNr + i + 1 and lineNr + i + 1 < #lines then
+			if string.find(lines[lineNr + i + 1], "^%[") and endPos == 0 then
+				endPos = lineNr + i
+			end
+		end
+
+		if startPos > 0 and endPos > 0 then
+			print(startPos .. " : " .. endPos)
+			break
+		end
+
+		if endPos == 0 then
+			endPos = #lines
+		end
+	end
+
+	for i = startPos, endPos do
+		table.insert(output, lines[i])
+	end
+
+	local prompt = {
+		"w = save",
+		"q = quit",
+	}
+
+	vim.api.nvim_win_set_buf(win, editPage)
+
+	vim.api.nvim_buf_set_lines(editPage, 0, -1, false, prompt)
+	vim.api.nvim_buf_set_lines(editPage, -1, -1, false, output)
+end
+
 local function todo()
+	local prompt = {
+		"a = add new note",
+		"e = edit not",
+		"<Space> = toggle status",
+		string.rep("_", 40),
+		"",
+	}
 	local mainPage = vim.api.nvim_create_buf(false, true)
 
 	local width = 160
@@ -102,6 +154,7 @@ local function todo()
 		row = row,
 		border = "single",
 	})
+
 	vim.api.nvim_win_set_option(win, "number", false)
 	vim.api.nvim_win_set_option(win, "relativenumber", false)
 	vim.api.nvim_win_set_option(win, "signcolumn", "no")
@@ -111,7 +164,31 @@ local function todo()
 		add(win, mainPage)
 	end, { buffer = mainPage })
 
+	vim.keymap.set("n", "e", function()
+		edit(win, mainPage)
+	end, { buffer = mainPage })
+
+	vim.api.nvim_buf_set_lines(mainPage, 0, -1, false, prompt)
 	update(mainPage)
+	vim.api.nvim_win_set_cursor(win, { #prompt + 1, 3 })
+	vim.api.nvim_create_autocmd("CursorMoved", {
+		callback = function()
+			local buf = vim.api.nvim_get_current_buf()
+			if buf == mainPage then
+				local cur = vim.api.nvim_win_get_cursor(win)
+				local curline, curcol = cur[1], cur[2]
+
+				if curline == #prompt then
+					-- local endLine = vim.api.nvim_buf_line_count(mainPage)
+					vim.api.nvim_win_set_cursor(win, { #prompt + 1, 3 })
+				end
+
+				if curcol ~= 3 then
+					vim.api.nvim_win_set_cursor(win, { curline, 3 })
+				end
+			end
+		end,
+	})
 end
 
 vim.api.nvim_create_user_command("ToDo", function()
