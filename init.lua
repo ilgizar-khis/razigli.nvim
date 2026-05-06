@@ -32,6 +32,7 @@ require("lsp.cmp")
 require("lsp.formatter")
 require("lsp.brackets")
 require("lsp.command")
+require("lsp.treesitter")
 
 require("ui.colorscheme")
 require("ui.tabline")
