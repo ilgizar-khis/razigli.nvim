@@ -50,3 +50,5 @@ require("git.git")
 require("git.view")
 require("git.codediff")
 require("git.signs")
+
+require("notes.markdown")
