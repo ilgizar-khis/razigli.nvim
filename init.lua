@@ -21,6 +21,7 @@ vim.opt.showtabline = 2
 vim.opt.signcolumn = "yes"
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.winborder = "single"
 -- pairs
 vim.opt.matchtime = 2
 -- clipboard
