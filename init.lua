@@ -14,14 +14,15 @@ vim.opt.termguicolors = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 -- lines and columns
-vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
+vim.opt.cursorline = false
+vim.opt.cursorcolumn = false
 vim.opt.laststatus = 3
 vim.opt.showtabline = 2
 vim.opt.signcolumn = "yes"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.winborder = "single"
+vim.opt.fillchars = { eob = " " }
 -- pairs
 vim.opt.matchtime = 2
 -- clipboard
