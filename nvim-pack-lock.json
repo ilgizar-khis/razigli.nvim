@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "404ab55beb8b63d4c4be4bfd4e528441745b000a",
+      "rev": "2ef3db111181c5eef22a462aa0122349a6027f28",
       "src": "https://github.com/saghen/blink.cmp.git"
     },
     "blink.lib": {
@@ -33,7 +33,7 @@
       "src": "https://github.com/ellisonleao/gruvbox.nvim.git"
     },
     "image.nvim": {
-      "rev": "446a8a5cc7a3eae3185ee0c697732c32a5547a0b",
+      "rev": "9d3c45cf214c63e4daa1dabe74301b01a994ed51",
       "src": "https://github.com/3rd/image.nvim.git"
     },
     "image_preview.nvim": {
