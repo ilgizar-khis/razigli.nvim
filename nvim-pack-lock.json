@@ -32,16 +32,24 @@
       "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
       "src": "https://github.com/ellisonleao/gruvbox.nvim.git"
     },
+    "image.nvim": {
+      "rev": "446a8a5cc7a3eae3185ee0c697732c32a5547a0b",
+      "src": "https://github.com/3rd/image.nvim.git"
+    },
+    "image_preview.nvim": {
+      "rev": "d015f9c707916735768d19b8659fc6d33bdccf92",
+      "src": "https://github.com/adelarsq/image_preview.nvim.git"
+    },
     "markview.nvim": {
       "rev": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9",
       "src": "https://github.com/OXY2DEV/markview.nvim.git"
     },
     "mason-lspconfig.nvim": {
-      "rev": "0c2823e0418f3d9230ff8b201c976e84de1cb401",
+      "rev": "51feb0ada33d18f3c5c71ffb46005dbf8b33bef4",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim.git"
     },
     "mason.nvim": {
-      "rev": "cb8445f8ce85d957416c106b780efd51c6298f89",
+      "rev": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9",
       "src": "https://github.com/mason-org/mason.nvim.git"
     },
     "mini.indentscope": {
@@ -65,7 +73,7 @@
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "neogit": {
-      "rev": "88000e7e60177558d1b428a0d561c92e5d81341e",
+      "rev": "395ac481e197784e410b59b987fadaf9e7481df1",
       "src": "https://github.com/NeogitOrg/neogit.git"
     },
     "nui.nvim": {
@@ -73,7 +81,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
+      "rev": "451d4ef9abd4f0f08e379ef0d55d1c391b6125a7",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-surround": {
@@ -85,7 +93,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
     },
     "nvim-web-devicons": {
-      "rev": "4fc505ac7bd7692824a142e96e5f529c133862f8",
+      "rev": "2795c26c916bb3c57dde308b82be51971fa92747",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
