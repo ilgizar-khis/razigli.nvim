@@ -98,8 +98,8 @@ local function confirm(win, buffer)
 	local packs = vim.api.nvim_buf_get_lines(buffer, #prompt, -1, false)
 	local markedPacks = {}
 	for _, line in ipairs(packs) do
-		if string.find(line, "^%[%+%]") then
-			local name, _ = string.gsub(line, "^%[%+%] ", "")
+		if string.find(line, "^%[%-%]") then
+			local name, _ = string.gsub(line, "^%[%-%] ", "")
 			table.insert(markedPacks, name)
 		end
 	end
