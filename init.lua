@@ -36,6 +36,8 @@ require("lsp.brackets")
 require("lsp.command")
 require("lsp.treesitter")
 
+require("snacks.init")
+
 require("ui.colorscheme")
 require("ui.colorizer")
 require("ui.tabline")
