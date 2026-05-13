@@ -37,6 +37,7 @@ require("lsp.command")
 require("lsp.treesitter")
 
 require("ui.colorscheme")
+require("ui.colorizer")
 require("ui.tabline")
 require("ui.statusline")
 require("ui.terminal")
