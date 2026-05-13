@@ -32,6 +32,10 @@
       "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
       "src": "https://github.com/ellisonleao/gruvbox.nvim.git"
     },
+    "markview.nvim": {
+      "rev": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9",
+      "src": "https://github.com/OXY2DEV/markview.nvim.git"
+    },
     "mason-lspconfig.nvim": {
       "rev": "51feb0ada33d18f3c5c71ffb46005dbf8b33bef4",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim.git"
@@ -39,6 +43,10 @@
     "mason.nvim": {
       "rev": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9",
       "src": "https://github.com/mason-org/mason.nvim.git"
+    },
+    "mdnotes.nvim": {
+      "rev": "420efe6bf247494a10e817b5440bd798bc0ac4b4",
+      "src": "https://github.com/ymic9963/mdnotes.nvim"
     },
     "mini.indentscope": {
       "rev": "e0601f75aa5137a5a13bb92a988c9a300f5bd3de",
