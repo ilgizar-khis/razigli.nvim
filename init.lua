@@ -36,7 +36,7 @@ require("lsp.brackets")
 require("lsp.command")
 require("lsp.treesitter")
 
-require("snacks.init")
+require("snacks_nvim.init")
 
 require("ui.colorscheme")
 require("ui.colorizer")
