@@ -1,7 +1,6 @@
 vim.pack.add({
 	"https://github.com/nvim-mini/mini.pairs.git",
 	"https://github.com/kylechui/nvim-surround.git",
-	"https://github.com/nvim-mini/mini.indentscope.git",
 })
 
 require("mini.pairs").setup({
@@ -22,6 +21,3 @@ require("mini.pairs").setup({
 		["`"] = { action = "closeopen", pair = "``", neigh_pattern = "^[^\\]", register = { cr = false } },
 	},
 })
-
-local MiniIndentScope = require("mini.indentscope")
-MiniIndentScope.setup({})
