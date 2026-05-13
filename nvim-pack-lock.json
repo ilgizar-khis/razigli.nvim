@@ -8,6 +8,10 @@
       "rev": "796121278a414eb0b487d115786c603a764ac82a",
       "src": "https://github.com/saghen/blink.lib.git"
     },
+    "care.nvim": {
+      "rev": "82090f731496d611a783254a734495853a793a27",
+      "src": "https://github.com/max397574/care.nvim.git"
+    },
     "codediff.nvim": {
       "rev": "8afc229d38dc13ce71b2ffbb860084b2c726e061",
       "src": "https://github.com/esmuellert/codediff.nvim.git"
