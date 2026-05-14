@@ -20,10 +20,6 @@
       "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
       "src": "https://github.com/sindrets/diffview.nvim.git"
     },
-    "ergoterm.nvim": {
-      "rev": "0fd6870bbbd3de5ab198bff0fceaa6f694ead01c",
-      "src": "https://github.com/waiting-for-dev/ergoterm.nvim.git"
-    },
     "gitsigns.nvim": {
       "rev": "6d808f99bd63303646794406e270bd553ad7792e",
       "src": "https://github.com/lewis6991/gitsigns.nvim.git"
@@ -45,7 +41,7 @@
       "src": "https://github.com/mason-org/mason-lspconfig.nvim.git"
     },
     "mason.nvim": {
-      "rev": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9",
+      "rev": "8e921c2b68571e978db5d4d3fef9c9a7f8755473",
       "src": "https://github.com/mason-org/mason.nvim.git"
     },
     "mini.pairs": {
@@ -77,7 +73,7 @@
       "src": "https://github.com/catgoose/nvim-colorizer.lua.git"
     },
     "nvim-lspconfig": {
-      "rev": "75e49cfa588a89ca667d767c0afef3ceac205faa",
+      "rev": "4d9647d7b14dd2756578761f8cc2cf80f671b926",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-surround": {
@@ -101,7 +97,7 @@
       "src": "https://github.com/folke/snacks.nvim.git"
     },
     "telescope.nvim": {
-      "rev": "506338434fec5ad19cb1f8d45bf92d66c4917393",
+      "rev": "aa4ad82068176e9610034eedcf945289e90e5b0a",
       "src": "https://github.com/nvim-telescope/telescope.nvim.git"
     },
     "toggleterm.nvim": {
