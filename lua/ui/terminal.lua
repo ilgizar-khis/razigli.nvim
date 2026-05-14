@@ -4,5 +4,5 @@ vim.pack.add({
 
 require("toggleterm").setup({})
 
-vim.keymap.set("n", "tt", "<CMD>ToggleTerm<CR>")
-vim.keymap.set("t", "<ESC>", "<CMD>ToggleTerm<CR>")
+vim.keymap.set("n", "tt", "<CMD>ToggleTerm<CR>", { desc = "open terminal" })
+vim.keymap.set("t", "<ESC>", "<CMD>ToggleTerm<CR>", { desc = "close terminal" })
