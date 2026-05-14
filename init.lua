@@ -29,33 +29,3 @@ vim.opt.matchtime = 2
 vim.opt.clipboard = "unnamedplus"
 
 require("autoload").load()
-
-require("lsp.lsp")
-require("lsp.mason")
-require("lsp.cmp")
-require("lsp.formatter")
-require("lsp.brackets")
-require("lsp.command")
-require("lsp.treesitter")
-
-require("snacksnvim.init")
-
-require("ui.colorscheme")
-require("ui.colorizer")
-require("ui.tabline")
-require("ui.statusline")
-require("ui.terminal")
-require("ui.telescope")
-require("ui.filemanager")
-
-require("keys.buffers")
-
-require("pack.clear")
-require("pack.list")
-
-require("git.git")
-require("git.view")
-require("git.codediff")
-require("git.signs")
-
-require("notes.markdown")
