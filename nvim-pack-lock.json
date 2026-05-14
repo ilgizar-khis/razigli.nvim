@@ -37,7 +37,7 @@
       "src": "https://github.com/OXY2DEV/markview.nvim.git"
     },
     "mason-lspconfig.nvim": {
-      "rev": "51feb0ada33d18f3c5c71ffb46005dbf8b33bef4",
+      "rev": "eaa34887d444cb002e1b165fac399ae4bbc771f7",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim.git"
     },
     "mason.nvim": {
@@ -45,15 +45,15 @@
       "src": "https://github.com/mason-org/mason.nvim.git"
     },
     "mini.pairs": {
-      "rev": "42387c7fe68fc0b6e95eaf37f1bb76e7bffaa0d9",
+      "rev": "30cf2f01c4aaa2033db67376b9924fa2442c05d6",
       "src": "https://github.com/nvim-mini/mini.pairs.git"
     },
     "mini.statusline": {
-      "rev": "b456bfe845e475e9cec065b7a9a1ef657ad2f41b",
+      "rev": "e9e5c147385e5e0310ab79162dd08d0465e96d83",
       "src": "https://github.com/nvim-mini/mini.statusline.git"
     },
     "mini.tabline": {
-      "rev": "169af955ad2ed0ffcc3d2c83e850bcc7eaac2f0e",
+      "rev": "5c32522e128ba02e78d091ab2d5c6972f673c440",
       "src": "https://github.com/nvim-mini/mini.tabline.git"
     },
     "neo-tree.nvim": {
@@ -61,7 +61,7 @@
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "neogit": {
-      "rev": "395ac481e197784e410b59b987fadaf9e7481df1",
+      "rev": "99326a1310fb2d616b455d2fd16d01bf00682f06",
       "src": "https://github.com/NeogitOrg/neogit.git"
     },
     "nui.nvim": {
@@ -73,7 +73,7 @@
       "src": "https://github.com/catgoose/nvim-colorizer.lua.git"
     },
     "nvim-lspconfig": {
-      "rev": "451d4ef9abd4f0f08e379ef0d55d1c391b6125a7",
+      "rev": "75e49cfa588a89ca667d767c0afef3ceac205faa",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-surround": {
