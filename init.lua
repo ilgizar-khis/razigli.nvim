@@ -28,6 +28,8 @@ vim.opt.matchtime = 2
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
+require("autoload").load()
+
 require("lsp.lsp")
 require("lsp.mason")
 require("lsp.cmp")
@@ -36,7 +38,7 @@ require("lsp.brackets")
 require("lsp.command")
 require("lsp.treesitter")
 
-require("snacks_nvim.init")
+require("snacksnvim.init")
 
 require("ui.colorscheme")
 require("ui.colorizer")
