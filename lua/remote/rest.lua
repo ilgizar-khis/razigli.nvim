@@ -12,7 +12,5 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.keymap.set("n", "<CR>", kulala.run, { buffer = true, desc = "Send request" })
 		vim.keymap.set("n", "<Space>", kulala.toggle_view, { buffer = true, desc = "Send request" })
-		vim.keymap.set("n", "l", kulala.jump_next, { buffer = true, desc = "Send request" })
-		vim.keymap.set("n", "h", kulala.jump_prev, { buffer = true, desc = "Send request" })
 	end,
 })
