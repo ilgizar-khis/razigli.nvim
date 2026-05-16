@@ -1,6 +1,5 @@
 vim.pack.add({ "https://github.com/neovim/nvim-lspconfig.git" })
 
-vim.lsp.enable("basedpyright")
 vim.lsp.enable("lua_ls")
 
 vim.diagnostic.config({
