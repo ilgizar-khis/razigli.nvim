@@ -9,7 +9,7 @@
       "src": "https://github.com/saghen/blink.lib.git"
     },
     "codediff.nvim": {
-      "rev": "8afc229d38dc13ce71b2ffbb860084b2c726e061",
+      "rev": "e500fb5e7e2fbce701c888b81a9449e1052413ec",
       "src": "https://github.com/esmuellert/codediff.nvim.git"
     },
     "conform.nvim": {
@@ -57,7 +57,7 @@
       "src": "https://github.com/nvim-mini/mini.tabline.git"
     },
     "neo-tree.nvim": {
-      "rev": "19d20a99bf0061a5ecc4343d2f09fa713306c965",
+      "rev": "7abc884a07696a909cff57de7a0b7054ce151f98",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "neogit": {
