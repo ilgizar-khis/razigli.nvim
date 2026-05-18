@@ -4,6 +4,6 @@ vim.pack.add({
 
 require("toggleterm").setup({})
 
-vim.keymap.set("n", "tt", "<CMD>ToggleTerm dir=float<CR>", { desc = "open terminal" })
-vim.keymap.set("t", "<ESC>", "<CMD>ToggleTerm<CR>", { desc = "close terminal" })
+vim.keymap.set("n", "tt", "<CMD>ToggleTerm direction=float<CR>", { desc = "open terminal" })
+vim.keymap.set("t", "<ESC>", "<CMD>ToggleTerm direction=float<CR>", { desc = "close terminal" })
 vim.keymap.set("t", "<TAB>", "<CMD>wincmd w<CR>", { desc = "close terminal" })
