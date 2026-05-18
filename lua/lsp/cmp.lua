@@ -11,4 +11,10 @@ BlinkCmp.setup({
 		["<Tab>"] = { "select_next", "fallback" },
 		["<CR>"] = { "select_and_accept", "fallback" },
 	},
+	signature = {
+		enabled = true,
+		window = {
+			show_documentation = true,
+		},
+	},
 })
