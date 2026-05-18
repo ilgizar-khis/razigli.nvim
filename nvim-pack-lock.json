@@ -9,7 +9,7 @@
       "src": "https://github.com/saghen/blink.lib.git"
     },
     "codediff.nvim": {
-      "rev": "e500fb5e7e2fbce701c888b81a9449e1052413ec",
+      "rev": "76ff1b13f0bcba655dca85cea1ef0df877a53c0f",
       "src": "https://github.com/esmuellert/codediff.nvim.git"
     },
     "conform.nvim": {
@@ -33,7 +33,7 @@
       "src": "https://github.com/mistweaverco/kulala.nvim.git"
     },
     "markview.nvim": {
-      "rev": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9",
+      "rev": "a55e91f25994617a477d4a0e0b326f9dfa648f80",
       "src": "https://github.com/OXY2DEV/markview.nvim.git"
     },
     "mason-lspconfig.nvim": {
@@ -73,7 +73,7 @@
       "src": "https://github.com/catgoose/nvim-colorizer.lua.git"
     },
     "nvim-lspconfig": {
-      "rev": "4d9647d7b14dd2756578761f8cc2cf80f671b926",
+      "rev": "3de240997fc3208eb29df5e5c17ba4665961bd84",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-surround": {
@@ -85,7 +85,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
     },
     "nvim-web-devicons": {
-      "rev": "2795c26c916bb3c57dde308b82be51971fa92747",
+      "rev": "7d8dad2c837fcdf2e65997e68657c1a21c568074",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
