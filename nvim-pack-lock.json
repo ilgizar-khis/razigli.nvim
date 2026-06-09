@@ -4,6 +4,11 @@
       "rev": "1900f89dc17c603eec29960f57c00bd9ae696495",
       "src": "https://github.com/antoinemadec/FixCursorHold.nvim.git"
     },
+    "blink.cmp": {
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
+      "src": "https://github.com/saghen/blink.cmp.git",
+      "version": "'v1'"
+    },
     "codediff.nvim": {
       "rev": "5d6aa753797a0ebda14dd769ed03d12a320d689b",
       "src": "https://github.com/esmuellert/codediff.nvim.git"
@@ -118,7 +123,7 @@
       "src": "https://github.com/nvim-telescope/telescope.nvim.git"
     },
     "terminal.razigli": {
-      "rev": "8b838f4c70a33bd373151b11dc64a01a1d923405",
+      "rev": "03f990fdcd5ffa99100a397581d74df882800050",
       "src": "https://github.com/ilgizar-khis/terminal.razigli.git",
       "version": "'master'"
     },
