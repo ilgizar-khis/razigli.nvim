@@ -13,3 +13,11 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.smartindent = true
+
+-- UX config
+vim.opt.scrolloff = 4
+vim.opt.sidescrolloff = 4
+vim.opt.wrap = false
+vim.opt.showmatch = true
+vim.opt.clipboard = "unnamedplus"
+
