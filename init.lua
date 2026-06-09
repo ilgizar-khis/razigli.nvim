@@ -14,9 +14,18 @@ vim.opt.laststatus = 3
 
 -- HL
 -- basic
-vim.cmd("colorscheme lunaperche")
+vim.cmd("colorscheme sorbet")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- numberlines
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#000000", fg = "#ffffff" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#121212" })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#000000", fg = "#ffffff" })
+vim.api.nvim_set_hl(0, "WinSeparator", { bg = "#000000", fg = "#ffffff" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "TabLine", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "TabLineFill", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "TabLineSel", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000" })
+-- numberlines and signcolumn
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff", bg = "none" })
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#ffcabc", bg = "none" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ffcabc", bg = "none" })
