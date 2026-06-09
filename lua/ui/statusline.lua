@@ -18,5 +18,4 @@ vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", visual_hl)
 vim.api.nvim_set_hl(0, "MiniStatuslineModeReplace", replace_hl)
 vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", command_hl)
 vim.api.nvim_set_hl(0, "MiniStatuslineModeOther", other_hl)
-
 vim.api.nvim_set_hl(0, "MiniStatuslineFilename", other_hl)
