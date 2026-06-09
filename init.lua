@@ -38,3 +38,5 @@ vim.opt.fillchars = { eob = " " }
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+require("autoload").load()
