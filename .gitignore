@@ -1,0 +1,8 @@
+*.swp
+
+Session.vim
+
+.local.vim
+
+jdtls.lua
+
