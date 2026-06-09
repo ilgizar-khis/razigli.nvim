@@ -30,13 +30,6 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#ffcabc", bg = "none" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ffcabc", bg = "none" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "#000000" })
 -- popup menu
-vim.api.nvim_set_hl(0, "Pmenu", { bg = "#121212", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#454545", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuKind", { bg = "#121212", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuKindSel", { bg = "#454545", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuThumbExtra", { bg = "#121212", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuThumbExtraSel", { bg = "#454545", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#ffffff" })
 
 -- indents config
 vim.opt.tabstop = 4
