@@ -12,6 +12,8 @@ local other_hl = { bg = "none", fg = "#f0fcf0" }
 local command_hl = { bg = "none", fg = "#ccffaa", bold = true }
 local replace_hl = { bg = "none", fg = "#ffffaa", bold = true }
 
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000" })
+
 vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", normal_hl)
 vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", insert_hl)
 vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", visual_hl)
