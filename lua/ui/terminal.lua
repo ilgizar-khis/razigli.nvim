@@ -3,7 +3,7 @@ local M = {
 	win = nil,
 }
 
-vim.api.nvim_create_user_command("Terminal", function()
+function M.toggle()
 	local buffer = vim.api.nvim_create_buf(false, true)
 	if M.buffer and vim.api.nvim_buf_is_valid(M.buffer) then
 		buffer = M.buffer
@@ -35,6 +35,9 @@ vim.api.nvim_create_user_command("Terminal", function()
 		vim.cmd("term")
 		M.buffer = vim.api.nvim_win_get_buf(M.win)
 	end
-	
+end
+
+vim.api.nvim_create_user_command("Terminal", function()
+	M.toggle()
 end, {})
 return M
