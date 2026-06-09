@@ -1,8 +1,17 @@
--- config number and signcolumn
+-- LINE AND COLUMNS --
+-- config number
 vim.opt.number = true
 vim.opt.relativenumber = true
+-- signcolumn
 vim.opt.signcolumn = "yes:2"
-
+-- cursor
+vim.opt.cursorline = false
+vim.opt.cursorcolumn = false
+-- tabline
+vim.opt.showtabline = 2
+-- statusline
+vim.opt.laststatus = 3
+-- HL
 vim.api.nvim_set_hl(0, "LineNr", {fg = "#ffffff"})
 vim.api.nvim_set_hl(0, "LineNrAbove", {fg = "#ffcabc"})
 vim.api.nvim_set_hl(0, "LineNrBelow", {fg = "#ffcabc"})
@@ -18,8 +27,12 @@ vim.opt.smartindent = true
 vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 4
 vim.opt.wrap = false
-vim.opt.showmatch = true
 vim.opt.clipboard = "unnamedplus"
+
+-- view
+vim.opt.winborder = "single"
+vim.opt.pumborder = "single"
+vim.opt.fillchars = { eob = " " }
 
 -- search
 vim.opt.smartcase = true
