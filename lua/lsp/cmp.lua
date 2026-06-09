@@ -1,4 +1,10 @@
-vim.opt.completeopt = { "menu", "noselect", "popup" }
+vim.opt.completeopt = { "menuone", "noselect", "popup" }
+
+local function trigger()
+	if vim.fn.pumvisible() == 0 then
+		vim.lsp.completion.get()
+	end
+end
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -10,9 +16,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.api.nvim_create_autocmd("InsertCharPre", {
 				buffer = args.buf,
 				callback = function()
-					if vim.fn.pumvisible == 0 then
-						vim.defer_fn(vim.lsp.completion.get, 100)
-					end
+					vim.defer_fn(trigger, 100)
 				end
 			})
 		end
