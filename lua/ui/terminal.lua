@@ -1,6 +1,9 @@
 local M = {
 	buffer = nil,
 	win = nil,
+	width = 160,
+	height = 40,
+	border = "single",
 }
 
 function M.toggle()
@@ -9,22 +12,20 @@ function M.toggle()
 		buffer = M.buffer
 	end
 
-	local width = 160
-	local height = 40
-	local col = math.floor((vim.api.nvim_get_option("columns") - width) / 2)
-	local row = math.floor((vim.api.nvim_get_option("lines") - height) / 2)
+	local col = math.floor((vim.api.nvim_get_option("columns") - M.width) / 2)
+	local row = math.floor((vim.api.nvim_get_option("lines") - M.height) / 2)
 
 	local opts = {
 		relative = "editor",
-		width = width,
-		height = height,
+		width = M.width,
+		height = M.height,
 		col = col,
 		row = row,
 		style = "minimal",
-		border = "single",
+		border = M.border,
 	}
 
-	if M.win then
+	if M.win and vim.api.nvim_win_is_valid(M.win) then
 		vim.api.nvim_win_close(M.win, false)
 		M.win = nil
 	else
@@ -35,6 +36,8 @@ function M.toggle()
 		vim.cmd("term")
 		M.buffer = vim.api.nvim_win_get_buf(M.win)
 	end
+
+	vim.opt_local.buflisted = false
 end
 
 vim.api.nvim_create_user_command("Terminal", function()
