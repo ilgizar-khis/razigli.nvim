@@ -7,10 +7,6 @@ vim.opt.signcolumn = "yes:2"
 -- cursor
 vim.opt.cursorline = false
 vim.opt.cursorcolumn = false
--- tabline
-vim.opt.showtabline = 2
--- statusline
-vim.opt.laststatus = 3
 
 -- HL
 -- basic

@@ -15,6 +15,8 @@ MiniTabline.setup({
 		return borderLeft .. suffix .. MiniTabline.default_format(buf_id, label) .. borderRight
 	end,
 })
+-- enable tabline
+vim.opt.showtabline = 2
 
 local selected = { bg = "#000000", fg = "#ffffff", bold = true }
 local modified = { bg = "#000000", fg = "#ffffff" }

@@ -5,6 +5,9 @@ vim.pack.add({
 MiniStatusline = require("mini.statusline")
 MiniStatusline.setup({})
 
+-- enable statusline
+vim.opt.laststatus = 2
+
 local normal_hl = { bg = "none", fg = "#ffffff", bold = true }
 local insert_hl = { bg = "none", fg = "#ffccaa", bold = true }
 local visual_hl = { bg = "none", fg = "#aaccff", bold = true }
