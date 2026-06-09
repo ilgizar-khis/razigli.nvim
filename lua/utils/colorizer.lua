@@ -1,6 +1,4 @@
-vim.pack.add({
-	"https://github.com/norcalli/nvim-colorizer.lua.git",
-})
+vim.pack.add({ "https://github.com/catgoose/nvim-colorizer.lua.git" })
 
 vim.opt.termguicolors = true
 
