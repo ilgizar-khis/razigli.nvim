@@ -21,3 +21,7 @@ vim.opt.wrap = false
 vim.opt.showmatch = true
 vim.opt.clipboard = "unnamedplus"
 
+-- search
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
