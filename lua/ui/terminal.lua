@@ -5,6 +5,8 @@ vim.pack.add({
 	}
 })
 
-require("razigli.terminal").setup({})
+local terminal = require("razigli.terminal")
+terminal.setup()
 
-
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", {noremap = true, silent = true})
+vim.keymap.set("n", "tt", terminal.toggle, {noremap = true, silent = true})
