@@ -1,5 +1,5 @@
 vim.pack.add({
-	"https://github.com/nvim-mini/mini.tabline.git"
+	"https://github.com/nvim-mini/mini.tabline.git",
 })
 
 local MiniTabline = require("mini.tabline")
@@ -16,9 +16,9 @@ MiniTabline.setup({
 	end,
 })
 
-local selected = {bg = "none", fg = "#ffffff", bold = true}
-local modified = {bg = "none", fg = "#ffffff"}
-local hl = {bg = "none", fg = "#ababab"}
+local selected = { bg = "none", fg = "#ffffff", bold = true }
+local modified = { bg = "none", fg = "#ffffff" }
+local hl = { bg = "none", fg = "#ababab" }
 
 vim.api.nvim_set_hl(0, "MiniTablineCurrent", selected)
 vim.api.nvim_set_hl(0, "MiniTablineVisible", selected)

@@ -1,5 +1,5 @@
 vim.pack.add({
-	"https://github.com/nvim-mini/mini.statusline.git"
+	"https://github.com/nvim-mini/mini.statusline.git",
 })
 
 MiniStatusline = require("mini.statusline")
