@@ -1,6 +1,8 @@
 local M = {
 	buffer = nil,
+	win = nil,
 }
+
 vim.api.nvim_create_user_command("Terminal", function()
 	local buffer = vim.api.nvim_create_buf(false, true)
 	if M.buffer and vim.api.nvim_buf_is_valid(M.buffer) then
@@ -22,11 +24,16 @@ vim.api.nvim_create_user_command("Terminal", function()
 		border = "single",
 	}
 
-	local win = vim.api.nvim_open_win(buffer, true, opts)
+	if M.win then
+		vim.api.nvim_win_close(M.win, false)
+		M.win = nil
+	else
+		M.win = vim.api.nvim_open_win(buffer, true, opts)
+	end
 
 	if not M.buffer or not vim.api.nvim_buf_is_valid(M.buffer) then
 		vim.cmd("term")
-		M.buffer = vim.api.nvim_win_get_buf(win)
+		M.buffer = vim.api.nvim_win_get_buf(M.win)
 	end
 	
 end, {})
