@@ -16,9 +16,9 @@ MiniTabline.setup({
 	end,
 })
 
-local selected = { bg = "none", fg = "#ffffff", bold = true }
-local modified = { bg = "none", fg = "#ffffff" }
-local hl = { bg = "none", fg = "#ababab" }
+local selected = { bg = "#000000", fg = "#ffffff", bold = true }
+local modified = { bg = "#000000", fg = "#ffffff" }
+local hl = { bg = "#000000", fg = "#ababab" }
 
 vim.api.nvim_set_hl(0, "MiniTablineCurrent", selected)
 vim.api.nvim_set_hl(0, "MiniTablineVisible", selected)
