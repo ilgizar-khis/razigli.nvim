@@ -11,10 +11,15 @@ vim.opt.cursorcolumn = false
 vim.opt.showtabline = 2
 -- statusline
 vim.opt.laststatus = 3
+
 -- HL
-vim.api.nvim_set_hl(0, "LineNr", {fg = "#ffffff"})
-vim.api.nvim_set_hl(0, "LineNrAbove", {fg = "#ffcabc"})
-vim.api.nvim_set_hl(0, "LineNrBelow", {fg = "#ffcabc"})
+-- basic
+vim.cmd("colorscheme lunaperche")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- numberlines
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff", bg = "none" })
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#ffcabc", bg = "none" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ffcabc", bg = "none" })
 
 -- indents config
 vim.opt.tabstop = 4
