@@ -23,3 +23,20 @@ vim.lsp.config("lua_ls", {
 
 vim.lsp.enable("basedpyright")
 vim.lsp.enable("lua_ls")
+
+vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "X",
+			[vim.diagnostic.severity.WARN] = "!",
+			[vim.diagnostic.severity.HINT] = "?",
+			[vim.diagnostic.severity.INFO] = "I",
+		},
+	},
+})
+
+vim.diagnostic.config({ virtual_text = true })
+
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ffabab" })
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#ffffab" })
+vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#ababff" })
