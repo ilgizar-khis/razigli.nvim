@@ -106,6 +106,10 @@
       "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "packs.razigli": {
+      "rev": "e809a4a861a7c517905d79fc70d5311525bdcfd4",
+      "src": "https://github.com/ilgizar-khis/packs.razigli.git"
+    },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
