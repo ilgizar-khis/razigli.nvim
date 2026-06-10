@@ -123,7 +123,7 @@
       "src": "https://github.com/nvim-telescope/telescope.nvim.git"
     },
     "terminal.razigli": {
-      "rev": "03f990fdcd5ffa99100a397581d74df882800050",
+      "rev": "bf502c994fea400ceb52d5d729c4d622c4383cec",
       "src": "https://github.com/ilgizar-khis/terminal.razigli.git",
       "version": "'master'"
     },
