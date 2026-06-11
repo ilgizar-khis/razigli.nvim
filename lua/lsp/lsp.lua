@@ -1,6 +1,6 @@
 vim.pack.add({ "https://github.com/neovim/nvim-lspconfig.git" })
 
-vim.lsp.config("pyright", {
+vim.lsp.config("basedpyright", {
 	root_markers = { ".venv", ".env", "pyproject.toml", "setup.py", "requirements.txt", ".git" },
 	settings = {
 		python = {
@@ -21,7 +21,7 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.enable("pyright")
+vim.lsp.enable("basedpyright")
 vim.lsp.enable("lua_ls")
 
 vim.diagnostic.config({
