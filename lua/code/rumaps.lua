@@ -55,6 +55,11 @@ vim.keymap.set("n", "К", "R", { noremap = true, silent = true }) -- mode
 vim.keymap.set("n", "м", "v", { noremap = true, silent = true }) -- in cursor
 vim.keymap.set("n", "М", "V", { noremap = true, silent = true }) -- in line
 
+for key, word in pairs(keywords) do
+	vim.keymap.set("n", "мш" .. key, "vi" .. word, { noremap = true, silent = true }) -- select in keyword
+	vim.keymap.set("n", "мф" .. key, "va" .. word, { noremap = true, silent = true }) -- select around keyword
+end
+
 -- delete
 vim.keymap.set("v", "в", "d", { noremap = true, silent = true }) -- delete selected
 vim.keymap.set("n", "вв", "dd", { noremap = true, silent = true }) -- delete line
