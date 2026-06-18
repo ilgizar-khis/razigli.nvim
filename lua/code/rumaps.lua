@@ -25,6 +25,5 @@ vim.keymap.set("n", "Г", "U", { noremap = true, silent = true }) -- undo line
 vim.keymap.set("n", "<C-к>", "<C-r>", { noremap = true, silent = true }) -- redo
 
 -- replace
-
-vim.keymap.set("n", "к", "r", { noremap = true, silent = true })
-vim.keymap.set("n", "К", "R", { noremap = true, silent = true })
+vim.keymap.set("n", "к", "r", { noremap = true, silent = true }) -- symbol
+vim.keymap.set("n", "К", "R", { noremap = true, silent = true }) -- mode
