@@ -26,3 +26,8 @@ vim.keymap.set("n", "С", "C", { noremap = true, silent = true })
 vim.keymap.set("n", "г", "u", { noremap = true, silent = true })
 vim.keymap.set("n", "Г", "U", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-к>", "<C-r>", { noremap = true, silent = true })
+
+-- replace
+
+vim.keymap.set("n", "к", "r", { noremap = true, silent = true })
+vim.keymap.set("n", "К", "R", { noremap = true, silent = true })
