@@ -1,3 +1,17 @@
+-- keywords
+local keywords = {
+	["ц"] = "w",
+	["и"] = "b",
+	["("] = "(",
+	[")"] = ")",
+	["х"] = "[",
+	["ъ"] = "]",
+	["Х"] = "{",
+	["Ъ"] = "}",
+	["э"] = '"',
+	["Э"] = "'",
+}
+
 -- move cursor to
 vim.keymap.set({ "n", "v" }, "р", "h", { noremap = true, silent = true }) -- left
 vim.keymap.set({ "n", "v" }, "о", "j", { noremap = true, silent = true }) -- down
@@ -35,18 +49,6 @@ vim.keymap.set("n", "М", "V", { noremap = true, silent = true }) -- in line
 -- delete
 vim.keymap.set("v", "в", "d", { noremap = true, silent = true }) -- delete selected
 vim.keymap.set("n", "вв", "dd", { noremap = true, silent = true }) -- delete line
-local keywords = {
-	["ц"] = "w",
-	["и"] = "b",
-	["("] = "(",
-	[")"] = ")",
-	["х"] = "[",
-	["ъ"] = "]",
-	["Х"] = "{",
-	["Ъ"] = "}",
-	["э"] = '"',
-	["Э"] = "'",
-}
 for key, word in pairs(keywords) do
 	vim.keymap.set("n", "вш" .. key, "di" .. word, { noremap = true, silent = true }) -- delete all in keyword
 	vim.keymap.set("n", "вф" .. key, "da" .. word, { noremap = true, silent = true }) -- delete all around keyword
