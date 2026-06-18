@@ -69,3 +69,10 @@ for key, word in pairs(keywords) do
 	vim.keymap.set("n", "вш" .. key, "di" .. word, { noremap = true, silent = true }) -- delete all in keyword
 	vim.keymap.set("n", "вф" .. key, "da" .. word, { noremap = true, silent = true }) -- delete all around keyword
 end
+
+-- write
+vim.keymap.set("n", "Жц<CR>", ":w<CR>", { noremap = true, silent = true })
+-- quit
+vim.keymap.set("n", "Жй<CR>", ":q<CR>", { noremap = true, silent = true })
+-- write and quit
+vim.keymap.set("n", "Жцй<CR>", ":wq<CR>", { noremap = true, silent = true })
