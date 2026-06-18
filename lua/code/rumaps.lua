@@ -20,10 +20,9 @@ vim.keymap.set("n", "Щ", "O", { noremap = true, silent = true }) -- above the c
 vim.keymap.set("n", "С", "C", { noremap = true, silent = true }) -- change line
 
 -- undo/redo
-
-vim.keymap.set("n", "г", "u", { noremap = true, silent = true })
-vim.keymap.set("n", "Г", "U", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-к>", "<C-r>", { noremap = true, silent = true })
+vim.keymap.set("n", "г", "u", { noremap = true, silent = true }) -- undo
+vim.keymap.set("n", "Г", "U", { noremap = true, silent = true }) -- undo line
+vim.keymap.set("n", "<C-к>", "<C-r>", { noremap = true, silent = true }) -- redo
 
 -- replace
 
