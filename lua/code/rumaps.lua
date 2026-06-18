@@ -27,3 +27,7 @@ vim.keymap.set("n", "<C-к>", "<C-r>", { noremap = true, silent = true }) -- red
 -- replace
 vim.keymap.set("n", "к", "r", { noremap = true, silent = true }) -- symbol
 vim.keymap.set("n", "К", "R", { noremap = true, silent = true }) -- mode
+
+-- enter to visual mode
+vim.keymap.set("n", "м", "v", { noremap = true, silent = true }) -- in cursor
+vim.keymap.set("n", "М", "V", { noremap = true, silent = true }) -- in line
