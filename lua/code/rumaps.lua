@@ -36,6 +36,10 @@ for key, word in pairs(keywords) do
 	vim.keymap.set("n", "нф" .. key, "ya" .. word, { noremap = true, silent = true }) -- yank around keyword
 end
 
+-- paste
+vim.keymap.set("n", "з", "p", { noremap = true, silent = true }) -- paste
+vim.keymap.set("n", "З", "P", { noremap = true, silent = true }) -- paste to current
+
 -- enter to insert mode
 vim.keymap.set("n", "ш", "i", { noremap = true, silent = true }) -- before the cursor
 vim.keymap.set("n", "ф", "a", { noremap = true, silent = true }) -- after the cursor
