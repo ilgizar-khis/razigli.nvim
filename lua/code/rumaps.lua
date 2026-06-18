@@ -27,6 +27,15 @@ vim.keymap.set({ "n", "v" }, "Ц", "W", { noremap = true, silent = true }) -- st
 vim.keymap.set({ "n", "v" }, "У", "E", { noremap = true, silent = true }) -- end of current or next longword
 vim.keymap.set({ "n", "v" }, "И", "B", { noremap = true, silent = true }) -- start of current or prev longword
 
+-- yank
+vim.keymap.set("v", "н", "y", { noremap = true, silent = true }) -- yank selected
+vim.keymap.set("n", "нн", "yy", { noremap = true, silent = true }) -- yank line
+
+for key, word in pairs(keywords) do
+	vim.keymap.set("n", "нш" .. key, "yi" .. word, { noremap = true, silent = true }) -- yank in keyword
+	vim.keymap.set("n", "нф" .. key, "ya" .. word, { noremap = true, silent = true }) -- yank around keyword
+end
+
 -- enter to insert mode
 vim.keymap.set("n", "ш", "i", { noremap = true, silent = true }) -- before the cursor
 vim.keymap.set("n", "ф", "a", { noremap = true, silent = true }) -- after the cursor
