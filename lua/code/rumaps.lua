@@ -20,6 +20,11 @@ vim.keymap.set({ "n", "v" }, "д", "l", { noremap = true, silent = true }) -- ri
 vim.keymap.set({ "n", "v" }, "пп", "gg", { noremap = true, silent = true }) -- start
 vim.keymap.set({ "n", "v" }, "П", "G", { noremap = true, silent = true }) -- end
 
+vim.keymap.set({ "n", "v" }, "ц", "w", { noremap = true, silent = true }) -- start of next word
+vim.keymap.set({ "n", "v" }, "и", "b", { noremap = true, silent = true }) -- start of current or prev word
+vim.keymap.set({ "n", "v" }, "Ц", "W", { noremap = true, silent = true }) -- start of next longword
+vim.keymap.set({ "n", "v" }, "И", "B", { noremap = true, silent = true }) -- start of current or prev longword
+
 -- enter to insert mode
 vim.keymap.set("n", "ш", "i", { noremap = true, silent = true }) -- before the cursor
 vim.keymap.set("n", "ф", "a", { noremap = true, silent = true }) -- after the cursor
