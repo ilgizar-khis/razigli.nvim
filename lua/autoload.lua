@@ -3,7 +3,7 @@ local M = {}
 M.require = {}
 M.preload = {}
 M.postload = {}
-M.ignore = {["autoload"] = true}
+M.ignore = { ["autoload"] = true }
 
 function M.scan(dirName)
 	local files = vim.fn.readdir(dirName)
@@ -13,13 +13,12 @@ function M.scan(dirName)
 		local stat = vim.uv.fs_stat(path)
 
 		if stat.type == "directory" then
-			M.scan(path, reqName)
+			M.scan(path)
 		else
 			if string.find(path, "%.lua") then
 				table.insert(M.require, path)
 			end
 		end
-
 	end
 end
 
