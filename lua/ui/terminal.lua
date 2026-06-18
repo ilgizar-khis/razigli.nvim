@@ -12,3 +12,4 @@ terminal.setup({
 
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("n", "tt", terminal.toggle, { noremap = true, silent = true })
+vim.keymap.set("n", "ее", terminal.toggle, { noremap = true, silent = true })
