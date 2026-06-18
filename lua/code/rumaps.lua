@@ -30,7 +30,11 @@ vim.keymap.set("n", "ш", "i", { noremap = true, silent = true }) -- before the 
 vim.keymap.set("n", "ф", "a", { noremap = true, silent = true }) -- after the cursor
 vim.keymap.set("n", "ы", "s", { noremap = true, silent = true }) -- in the cursor
 vim.keymap.set("n", "щ", "o", { noremap = true, silent = true }) -- below the cursor
-vim.keymap.set("n", "с", "c", { noremap = true, silent = true }) -- change
+
+for key, word in pairs(keywords) do
+	vim.keymap.set("n", "сш" .. key, "ci" .. word, { noremap = true, silent = true }) -- change in keyword
+	vim.keymap.set("n", "сф" .. key, "ca" .. word, { noremap = true, silent = true }) -- change around keyword
+end
 
 vim.keymap.set("n", "Ш", "I", { noremap = true, silent = true }) -- start of line
 vim.keymap.set("n", "Ф", "A", { noremap = true, silent = true }) -- end of line
