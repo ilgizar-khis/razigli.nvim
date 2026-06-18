@@ -1,3 +1,12 @@
+-- movement
+
+vim.keymap.set("n", "р", "h", { noremap = true, silent = true })
+vim.keymap.set("n", "о", "j", { noremap = true, silent = true })
+vim.keymap.set("n", "л", "k", { noremap = true, silent = true })
+vim.keymap.set("n", "д", "l", { noremap = true, silent = true })
+vim.keymap.set("n", "пп", "gg", { noremap = true, silent = true })
+vim.keymap.set("n", "П", "G", { noremap = true, silent = true })
+
 -- insert mode
 
 vim.keymap.set("n", "ш", "i", { noremap = true, silent = true })
