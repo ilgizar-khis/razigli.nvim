@@ -40,3 +40,8 @@ vim.diagnostic.config({ virtual_text = true })
 vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ffabab" })
 vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#ffffab" })
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#ababff" })
+
+-- keymaps
+vim.keymap.set("n", "grd", vim.lsp.buf.definition, { noremap = true, silent = true }) -- go to definition
+vim.keymap.set("n", "grl", vim.diagnostic.goto_next, { noremap = true, silent = true }) -- go to next error
+vim.keymap.set("n", "grh", vim.diagnostic.goto_prev, { noremap = true, silent = true }) -- go to prev error
