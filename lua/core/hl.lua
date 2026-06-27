@@ -12,4 +12,4 @@ vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ffcabc", bg = "none" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "#000000" })
 -- code
 vim.api.nvim_set_hl(0, "Comment", { fg = "#ababab", italic = true })
-vim.api.nvim_set_hl(0, "String", { fg = "#ffab00", italic = true })
+vim.api.nvim_set_hl(0, "String", { fg = "#ffab00" })
