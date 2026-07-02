@@ -10,7 +10,7 @@
       "src": "https://github.com/stevearc/conform.nvim.git"
     },
     "gitsigns.nvim": {
-      "rev": "2038c666bd9d8a0b7349a0b6ee00dc83104b9ecf",
+      "rev": "eb60cc7b94c46005237fd34170d76f3a089a90aa",
       "src": "https://github.com/lewis6991/gitsigns.nvim.git"
     },
     "ipynb.nvim": {
@@ -22,7 +22,7 @@
       "src": "https://github.com/goerz/jupytext.nvim.git"
     },
     "markview.nvim": {
-      "rev": "301e431c7b618235f5447d54465c70934bd33668",
+      "rev": "ecfa851e44f1a9e7731b95cc4618f48dd6bb070a",
       "src": "https://github.com/OXY2DEV/markview.nvim.git"
     },
     "mason-lspconfig.nvim": {
@@ -34,7 +34,7 @@
       "src": "https://github.com/mason-org/mason.nvim.git"
     },
     "mini.pairs": {
-      "rev": "db0fac0a25884183650352ccf92b362a41ed2e9c",
+      "rev": "fd150ac39b78e6a2286f5138e472b7dc7eba43b9",
       "src": "https://github.com/nvim-mini/mini.pairs.git"
     },
     "mini.statusline": {
@@ -63,7 +63,7 @@
       "src": "https://github.com/catgoose/nvim-colorizer.lua.git"
     },
     "nvim-lspconfig": {
-      "rev": "3371bf298c1f56efc26771ee961f461176958fb5",
+      "rev": "292f44408498103c47996ff5c18fd366293840d8",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-surround": {
@@ -75,7 +75,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
     },
     "nvim-web-devicons": {
-      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
+      "rev": "dad71387de386a946b123079d0e53f23028f3abd",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "packs.razigli": {
