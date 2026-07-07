@@ -13,14 +13,6 @@
       "rev": "eb60cc7b94c46005237fd34170d76f3a089a90aa",
       "src": "https://github.com/lewis6991/gitsigns.nvim.git"
     },
-    "ipynb.nvim": {
-      "rev": "9ec5b566dc37417b17d7e9de04d673506176e9fd",
-      "src": "https://github.com/ajbucci/ipynb.nvim.git"
-    },
-    "jupytext.nvim": {
-      "rev": "d7897ba4012c328f2a6bc955f1fe57578ebaceb1",
-      "src": "https://github.com/goerz/jupytext.nvim.git"
-    },
     "markview.nvim": {
       "rev": "092c0872fd2437b3b862d253910981142d2465aa",
       "src": "https://github.com/OXY2DEV/markview.nvim.git"
@@ -79,8 +71,9 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "packs.razigli": {
-      "rev": "e809a4a861a7c517905d79fc70d5311525bdcfd4",
-      "src": "https://github.com/ilgizar-khis/packs.razigli.git"
+      "rev": "ed3e61cdab892403e87eb895107195cc56ffa98e",
+      "src": "https://github.com/ilgizar-khis/packs.razigli.git",
+      "version": "'main'"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
