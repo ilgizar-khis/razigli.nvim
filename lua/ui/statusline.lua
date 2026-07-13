@@ -8,12 +8,12 @@ MiniStatusline.setup({})
 -- enable statusline
 vim.opt.laststatus = 3
 
-local normal_hl = { bg = "none", fg = "#ffffff", bold = true }
-local insert_hl = { bg = "none", fg = "#ffccaa", bold = true }
-local visual_hl = { bg = "none", fg = "#aaccff", bold = true }
-local other_hl = { bg = "none", fg = "#f0fcf0" }
-local command_hl = { bg = "none", fg = "#ccffaa", bold = true }
-local replace_hl = { bg = "none", fg = "#ffffaa", bold = true }
+local normal_hl = { bg = "#000000", fg = "#ffffff", bold = true }
+local insert_hl = { bg = "#000000", fg = "#ffccaa", bold = true }
+local visual_hl = { bg = "#000000", fg = "#aaccff", bold = true }
+local other_hl = { bg = "#000000", fg = "#f0fcf0" }
+local command_hl = { bg = "#000000", fg = "#ccffaa", bold = true }
+local replace_hl = { bg = "#000000", fg = "#ffffaa", bold = true }
 
 vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000" })
 
