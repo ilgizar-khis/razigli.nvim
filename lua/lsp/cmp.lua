@@ -38,10 +38,13 @@ BlinkCmp.setup({
 	},
 })
 
-vim.api.nvim_set_hl(0, "Pmenu", { bg = "#121212", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#454545", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuKind", { bg = "#121212", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuKindSel", { bg = "#454545", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuThumbExtra", { bg = "#121212", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuThumbExtraSel", { bg = "#454545", fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#ffffff" })
+local normal = { bg = "#121212", fg = "#ffffff" }
+local selected = { bg = "#ffffbb", fg = "#000000", bold = true }
+vim.api.nvim_set_hl(0, "Pmenu", normal)
+vim.api.nvim_set_hl(0, "PmenuSel", selected)
+vim.api.nvim_set_hl(0, "PmenuKind", normal)
+vim.api.nvim_set_hl(0, "PmenuKindSel", selected)
+vim.api.nvim_set_hl(0, "PmenuThumbExtra", normal)
+vim.api.nvim_set_hl(0, "PmenuThumbExtraSel", selected)
+vim.api.nvim_set_hl(0, "PmenuThumb", selected)
+vim.api.nvim_set_hl(0, "BlinkCmpSignatureHelpActiveParameter", selected)
