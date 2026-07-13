@@ -1,6 +1,6 @@
 -- HL
 -- basic
-vim.cmd("colorscheme sorbet")
+vim.cmd("colorscheme desert")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "WinSeparator", { bg = "#000000", fg = "#ffffff" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#121212" })
