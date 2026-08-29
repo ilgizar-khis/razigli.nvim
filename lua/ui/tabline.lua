@@ -5,12 +5,8 @@ vim.pack.add({
 local MiniTabline = require("mini.tabline")
 MiniTabline.setup({
 	format = function(buf_id, label)
-		local selected = vim.api.nvim_get_current_buf() == buf_id
 		local suffix = vim.bo[buf_id].modified and " +" or "  "
 		local borderLeft, borderRight = " ", " "
-		if selected then
-			borderLeft, borderRight = "[", "]"
-		end
 
 		return borderLeft .. suffix .. MiniTabline.default_format(buf_id, label) .. borderRight
 	end,
@@ -18,7 +14,7 @@ MiniTabline.setup({
 -- enable tabline
 vim.opt.showtabline = 2
 
-local selected = { bg = "#000000", fg = "#ffffff", bold = true }
+local selected = { bg = "#000000", fg = "#ff6767", bold = true }
 local modified = { bg = "#000000", fg = "#ffffff" }
 local default = { bg = "#000000", fg = "#ababab" }
 
