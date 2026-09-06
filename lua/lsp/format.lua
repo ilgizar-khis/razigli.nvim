@@ -12,6 +12,8 @@ conform.setup({
 		rust = { "rustfmt", lsp_format = "fallback" },
 		json = { "prettier" },
 		qml = { "prettier" },
+		html = { "prettier" },
+		css = { "prettier" },
 		cpp = { "clang_format" },
 		c = { "clang_format" },
 		java = { "lsp", lsp_format = "fallback" },
