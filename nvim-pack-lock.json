@@ -38,7 +38,7 @@
       "src": "https://github.com/nvim-mini/mini.tabline.git"
     },
     "neo-tree.nvim": {
-      "rev": "83e7a2982fd12b9c3d35bc39dd5877cd91a02a61",
+      "rev": "f3f3bf73414e400cf9fc13fda50f00404a8f8ab1",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
       "version": "3.0.0 - 4.0.0"
     },
@@ -55,7 +55,7 @@
       "src": "https://github.com/catgoose/nvim-colorizer.lua.git"
     },
     "nvim-lspconfig": {
-      "rev": "684cb45c2faa24ce463b4fe9aaf011bfe1e0fb26",
+      "rev": "84252f9832fb5b9024fe9f7258e7c2aff915e6fb",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-surround": {
@@ -63,11 +63,11 @@
       "src": "https://github.com/kylechui/nvim-surround.git"
     },
     "nvim-treesitter": {
-      "rev": "8b98b4470eb326f1c7b50dae79f8c963568e5720",
+      "rev": "41416e81a6c7f4af4984395bfe0cd8d174e70976",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
     },
     "nvim-web-devicons": {
-      "rev": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
+      "rev": "5f032a85be210cd1c6ac98861eb3b187ff3bd5eb",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "opencode.nvim": {
