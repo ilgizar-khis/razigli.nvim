@@ -23,6 +23,7 @@ vim.lsp.config("lua_ls", {
 
 vim.lsp.enable("pyright")
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("jdtls")
 
 vim.diagnostic.config({
 	signs = {
