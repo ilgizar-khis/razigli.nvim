@@ -12,3 +12,22 @@ end, {
 	buffer = 0,
 	desc = "запуск Rest run из ftplugin",
 })
+
+vim.keymap.set("n", "J", function()
+	local line_number = vim.api.nvim_win_get_cursor(0)[1]
+	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+	for i = line_number + 1, #lines do
+		local line = lines[i]
+		if string.find(line, "^###") then
+			vim.api.nvim_win_set_cursor(0, { i, 0 })
+			return
+		end
+	end
+	for i = 1, line_number do
+		local line = lines[i]
+		if string.find(line, "^###") then
+			vim.api.nvim_win_set_cursor(0, { i, 0 })
+			return
+		end
+	end
+end)
