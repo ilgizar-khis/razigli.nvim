@@ -9,9 +9,17 @@
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim.git"
     },
+    "fidget.nvim": {
+      "rev": "9e0201673e08e997e7cf52afca5565c70bd117f3",
+      "src": "https://github.com/j-hui/fidget.nvim.git"
+    },
     "gitsigns.nvim": {
       "rev": "5be654f2232c10ddcad19c1607a67b6b4b78fc29",
       "src": "https://github.com/lewis6991/gitsigns.nvim.git"
+    },
+    "kulala.nvim": {
+      "rev": "dcad056448773ae5b54cadbfdbd188a599cfebd3",
+      "src": "https://github.com/mistweaverco/kulala.nvim.git"
     },
     "markview.nvim": {
       "rev": "5d9fc2aa6dd1c2fbdc7a68bc79b300e9967b21ff",
@@ -62,6 +70,10 @@
       "rev": "84252f9832fb5b9024fe9f7258e7c2aff915e6fb",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
+    "nvim-nio": {
+      "rev": "edcc181a875301dd21840189aa2f2f9ad69fc172",
+      "src": "https://github.com/nvim-neotest/nvim-nio.git"
+    },
     "nvim-surround": {
       "rev": "8b47db616ef658b8fc27e61db2896aa2f40134de",
       "src": "https://github.com/kylechui/nvim-surround.git"
@@ -88,10 +100,18 @@
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
+    "rest.nvim": {
+      "rev": "714d5512aaec5565d55652480c16c26f8d95645d",
+      "src": "https://github.com/rest-nvim/rest.nvim.git"
+    },
     "terminal.razigli": {
       "rev": "bf502c994fea400ceb52d5d729c4d622c4383cec",
       "src": "https://github.com/ilgizar-khis/terminal.razigli.git",
       "version": "'master'"
+    },
+    "xml2lua.nvim": {
+      "rev": "c5fa33ad038958e9592df06e8ca6a88f4e7543aa",
+      "src": "https://github.com/a-usr/xml2lua.nvim.git"
     }
   }
 }
