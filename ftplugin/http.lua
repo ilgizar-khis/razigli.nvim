@@ -13,6 +13,19 @@ end, {
 	desc = "запуск Rest run из ftplugin",
 })
 
+--- @param lines table<string>
+--- @param start_number number
+--- @param end_number number
+--- @return number | nil
+local function find_header(lines, start_number, end_number)
+	for i = start_number, end_number do
+		local line = lines[i]
+		if string.find(line, "^###") then
+			return i
+		end
+	end
+end
+
 vim.keymap.set("n", "J", function()
 	local line_number = vim.api.nvim_win_get_cursor(0)[1]
 	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
