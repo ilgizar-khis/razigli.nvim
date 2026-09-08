@@ -27,20 +27,8 @@ local function find_header(lines, start_number, end_number)
 end
 
 vim.keymap.set("n", "J", function()
-	local line_number = vim.api.nvim_win_get_cursor(0)[1]
+	local line_nr = vim.api.nvim_win_get_cursor(0)[1]
 	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-	for i = line_number + 1, #lines do
-		local line = lines[i]
-		if string.find(line, "^###") then
-			vim.api.nvim_win_set_cursor(0, { i, 0 })
-			return
-		end
-	end
-	for i = 1, line_number do
-		local line = lines[i]
-		if string.find(line, "^###") then
-			vim.api.nvim_win_set_cursor(0, { i, 0 })
-			return
-		end
-	end
+	local i = find_header(lines, line_nr + 1, #lines) or find_header(lines, 1, line_nr)
+	vim.api.nvim_win_set_cursor(0, { i or 1, 0 })
 end)
