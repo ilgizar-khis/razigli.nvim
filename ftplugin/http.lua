@@ -16,9 +16,11 @@ end, {
 --- @param lines table<string>
 --- @param start_number number
 --- @param end_number number
+--- @param prev? boolean
 --- @return number | nil
-local function find_header(lines, start_number, end_number)
-	for i = start_number, end_number do
+local function find_header(lines, start_number, end_number, prev)
+	local step = prev and -1 or 1
+	for i = start_number, end_number, step do
 		local line = lines[i]
 		if string.find(line, "^###") then
 			return i
