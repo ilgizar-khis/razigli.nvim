@@ -14,7 +14,7 @@
       "src": "https://github.com/j-hui/fidget.nvim.git"
     },
     "gitsigns.nvim": {
-      "rev": "5be654f2232c10ddcad19c1607a67b6b4b78fc29",
+      "rev": "f2421c550618d257048afa650413d9e542ddbe67",
       "src": "https://github.com/lewis6991/gitsigns.nvim.git"
     },
     "kulala.nvim": {
@@ -26,7 +26,7 @@
       "src": "https://github.com/OXY2DEV/markview.nvim.git"
     },
     "mason-lspconfig.nvim": {
-      "rev": "40276c4df7e6bdce6801d6c035c6227f9115a855",
+      "rev": "77e06f7d2fc127e6ef0a720b59acbc50757cff19",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim.git"
     },
     "mason.nvim": {
@@ -67,7 +67,7 @@
       "src": "https://codeberg.org/mfussenegger/nvim-jdtls.git"
     },
     "nvim-lspconfig": {
-      "rev": "84252f9832fb5b9024fe9f7258e7c2aff915e6fb",
+      "rev": "ac9d2f7c4757db6320cab6697fe73e5e8adb2457",
       "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "nvim-nio": {
@@ -79,7 +79,7 @@
       "src": "https://github.com/kylechui/nvim-surround.git"
     },
     "nvim-treesitter": {
-      "rev": "41416e81a6c7f4af4984395bfe0cd8d174e70976",
+      "rev": "9a168f6357ed21c3a636e1727bc7d382abc451b8",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
     },
     "nvim-web-devicons": {
@@ -87,7 +87,7 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "opencode.nvim": {
-      "rev": "4576b372034495b8868e6cbe878e85c717998867",
+      "rev": "bf8db37e600bd83f4bec1303b7a41476381e455c",
       "src": "https://github.com/nickjvandyke/opencode.nvim",
       "version": ">=0.0.0"
     },
