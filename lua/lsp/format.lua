@@ -18,6 +18,9 @@ conform.setup({
 		c = { "clang_format" },
 		java = { "lsp", lsp_format = "fallback" },
 		http = { "kulala-fmt" },
+		sh = { "shfmt" },
+		bash = { "shfmt" },
+		zsh = { "shfmt" },
 		-- Conform will run the first available formatter
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 	},
