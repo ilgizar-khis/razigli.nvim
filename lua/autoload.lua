@@ -3,7 +3,7 @@ local M = {}
 M.require = {}
 M.preload = {}
 M.postload = {}
-M.ignore = { ["autoload"] = true }
+M.ignore = { ["autoload"] = true, ["utils.http"] = true }
 
 function M.scan(dirName)
 	local files = vim.fn.readdir(dirName)
